@@ -1,42 +1,182 @@
-#root {
-  max-width: 1280px;
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.8em; /* Adjusted for better visual hierarchy */
+}
+
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-links a:hover {
+  color: #3498db; /* Highlight color */
+  border-bottom: 2px solid #3498db; /* Bottom border on hover */
+}
+
+.container {
+  padding: 80px 40px 40px; /* Increased padding for more space around content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1400px; /* Increased max-width for a wider container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Model Card */
+.model-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Increased size */
+  margin: 20px;
+  padding: 20px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.model-card model-viewer {
+  width: 100%;
+  height: 300px; /* Increased height */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f4f4f4;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Products Section */
+.products {
+  display: flex; /* Changed from grid to flex for a single row layout */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: center; /* Center align items */
+  gap: 20px; /* Increased gap between cards */
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Product Card */
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px; /* Adjusted width for larger cards */
 }
 
-.card {
-  padding: 2em;
+.product-card model-viewer {
+  width: 100%;
+  height: 70%; /* Adjust height to fit within the product card */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f4f4f4;
 }
 
-.read-the-docs {
-  color: #888;
+.product-card h2 {
+  font-size: 1.5em; /* Increased font size */
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 1.1em; /* Increased font size */
+  color: #666;
+  margin: 10px 0;
+}
+
+.button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em; /* Increased font size */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+
+}
+
+/* Model viewer in modal */
+.modal-content model-viewer {
+  width: 1000px;
+  
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
 }
