@@ -96,7 +96,7 @@ const ModelViewerComponent: React.FC = () => {
                         <div className='product-card'>
                             <h1>Hooka</h1>
                             <p>Description</p>
-                            <h2>Price: $100</h2>
+                            <h2>Price: $1000</h2>
                             <button className='button' onClick={() => alert('Buy Now')}>Buy Now</button>
                         </div>
                     </div>
